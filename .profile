@@ -29,8 +29,7 @@ alias refstart='SBT_OPTS="-XX:MaxPermSize=512m" ./sbt "project refcode" start-se
 alias haproxystart='sudo /usr/local/Cellar/haproxy/1.4.15/sbin/haproxy -f /usr/local/etc/haproxy.cfg'
 alias fixnginx='sudo ipfw enable firewall'
 
-# DB!
-export DB_ENCRYPTION_KEY=hungry2601
+source '~/.dbkey'
 
 # LivingSocial speedup
 export RUBY_HEAP_FREE_MIN=1024
@@ -170,15 +169,7 @@ tman () {
 # SSH Openers                                                                 #
 ###############################################################################
 
-alias sshathena="ssh -2 -v jathayde@198.101.243.210"
-alias sshathenaold="ssh -2 -v jathayde@67.23.20.48"
-alias sshvacode="ssh -2 -v jmpa:G5+Tt43#rM5e@vacode.org"
-alias sshnavanti="ssh -2 -v root:openseas.prod.web.011oH2E0Rak@50.57.105.192"
-
-alias sshtingz="ssh -2 -v serveradmin@tingz.net@s51041.gridserver.com"
-alias sshmkm="ssh -2 -v mkmadmin@97.107.138.131"
-alias sshmkmroot="ssh -2 -v root@97.107.138.131"
-
+source "~/.sshopeners"
 
 ###############################################################################
 # Path Settings                                                               #
