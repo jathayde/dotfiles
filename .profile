@@ -29,7 +29,7 @@ alias refstart='SBT_OPTS="-XX:MaxPermSize=512m" ./sbt "project refcode" start-se
 alias haproxystart='sudo /usr/local/Cellar/haproxy/1.4.15/sbin/haproxy -f /usr/local/etc/haproxy.cfg'
 alias fixnginx='sudo ipfw enable firewall'
 
-source '~/.dbkey'
+source ~/.dbkey
 
 # LivingSocial speedup
 export RUBY_HEAP_FREE_MIN=1024
@@ -169,7 +169,7 @@ tman () {
 # SSH Openers                                                                 #
 ###############################################################################
 
-source "~/.sshopeners"
+source ~/.sshopeners
 
 ###############################################################################
 # Path Settings                                                               #
