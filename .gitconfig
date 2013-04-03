@@ -1,0 +1,50 @@
+[user]
+	name = John Athayde
+	email = john.athayde@livingsocial.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[color "status"]
+  add = green
+  changed = red
+  untracked = cyan
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  new = green bold
+  old = red bold
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+  pu = push
+  pl = pull
+  gap = add -p
+  pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
+  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  ll = log --stat --abbrev-commit
+  d = diff --color-words
+  home = config user.email "jmpa@meticulous.com"
+  work = config user.email "john.athayde@livingsocial.com"
+[merge]
+	tool = opendiff
+	summary = true
+[core]
+	excludesfile = /Users/jathayde/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[branch]
+	autosetuprebase = always
+[mergetool]
+	keepBackup = true
