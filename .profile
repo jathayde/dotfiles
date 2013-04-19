@@ -18,6 +18,11 @@ DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 # Custom Shell Commands                                                       #
 ###############################################################################
 
+# cd into whatever is the forefront Finder window
+cdf() { #short for cdfinder
+  cd "`osascript-e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
+}
+
 # LivingSocial
 alias standup='mate ~/.standup'
 alias openvpn="/usr/local/bin/pgrep racoon | xargs sudo kill -9; osascript /Volumes/LivingSocial/code/applescripts/openvpn.scpt"
@@ -30,6 +35,7 @@ alias haproxystart='sudo /usr/local/Cellar/haproxy/1.4.15/sbin/haproxy -f /usr/l
 alias fixnginx='sudo ipfw enable firewall'
 
 source ~/.dbkey
+source ~/.myqa
 
 # LivingSocial speedup
 export RUBY_HEAP_FREE_MIN=1024
